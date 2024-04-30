@@ -1,4 +1,4 @@
-// TransactionForm.js
+ // TransactionForm.js
 import React, { useState } from 'react';
 
 function TransactionForm({ onAddTransaction }) {
@@ -9,7 +9,7 @@ function TransactionForm({ onAddTransaction }) {
   const handleSubmit = (e) => {
     e.preventDefault();
     if (!description || !category || !date) return;
-    const newTransaction = { description, category,date };
+    const newTransaction = { description, category, date };
     onAddTransaction(newTransaction);
     setDescription('');
     setCategory('');
