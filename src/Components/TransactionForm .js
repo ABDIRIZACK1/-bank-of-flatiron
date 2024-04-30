@@ -4,7 +4,7 @@ import React, { useState } from 'react';
 function TransactionForm({ onAddTransaction }) {
   const [description, setDescription] = useState('');
   const [category, setCategory] = useState('');
-  const [date, setDate] = usestate(0);
+  const [date, setDate] = useState();
 
   const handleSubmit = (e) => {
     e.preventDefault();
@@ -18,7 +18,7 @@ function TransactionForm({ onAddTransaction }) {
 
   return (
     <form onSubmit={handleSubmit}>
-    <input type="date" placeholder="date" value={date} onChange={(e) => setDate(e.target.value)}
+    <input type="date" placeholder="date" value={date} onChange={(e) => setDate(e.target.value)} /> 
       <input
         type="text"
         placeholder="Description"
