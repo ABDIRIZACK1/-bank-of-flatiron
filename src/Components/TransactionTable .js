@@ -8,6 +8,7 @@ function TransactionTable({ transactions }) {
         <tr>
           <th>Description</th>
           <th>Category</th>
+        <th>Date</th>
         </tr>
       </thead>
       <tbody>
@@ -15,6 +16,7 @@ function TransactionTable({ transactions }) {
           <tr key={index}>
             <td>{transaction.description}</td>
             <td>{transaction.category}</td>
+            <td>{transaction.date}</td>
           </tr>
         ))}
       </tbody>
